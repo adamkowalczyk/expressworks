@@ -9,7 +9,7 @@ app.put('/message/:id', function(req, res){
 	var sha1 = crypto.createHash('sha1')
 	.update(new Date().toDateString() + id)
 	.digest('hex');
-	res.end(sha1);
+	res.send(sha1);
 });
 
 app.listen(process.argv[2]);

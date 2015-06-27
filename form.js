@@ -7,7 +7,7 @@ app.use(bodyparser.urlencoded({extended: false}));
 
 
 app.post('/form', function(req, res){
-	res.end(req.body.str.split('').reverse().join('') );
+	res.send(req.body.str.split('').reverse().join('') );
 });
 
 

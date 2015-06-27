@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
 
-app.get('/home', function(req, res){
-	res.send('Hello World!');
+app.get('/search', function(req, res) {
+	res.send(req.query);
 });
 
 app.listen(process.argv[2]);
